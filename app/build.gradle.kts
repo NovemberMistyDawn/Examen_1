@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.examen_1_maria_calvo"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.examen_1_maria_calvo"
@@ -32,6 +32,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 

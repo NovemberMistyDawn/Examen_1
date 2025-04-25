@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/AddCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="Añadir_Cantidad" />
+
+
+
+    <!--AÑADIR FECHA -->
+    <TextView
+        android:id="@+id/fechaTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selecciona una fecha"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:focusable="false"
+        android:layout_marginTop="16dp"/>
+
+
+    <Button
+        android:id="@+id/btnGuardarMovimiento"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar" />
+</LinearLayout>
