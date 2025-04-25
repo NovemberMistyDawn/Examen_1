@@ -19,7 +19,7 @@ import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var calculateButton: Button
+
 
     lateinit var movimientoList: List<Movimiento>
 
@@ -36,10 +36,7 @@ class MainActivity : AppCompatActivity() {
     var ingresos = 170.0f
     var gastos = 75.0f
 
-    //FALTA
-    //QUE ME DETECTE SI ES POSITOV O NEGATIVO/
-    //que me guarde las cosas y me las muestre en adapter
-    //que me haga el calculo de ingresos y gastos
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,14 +73,16 @@ class MainActivity : AppCompatActivity() {
         movimientoDAO = MovimientoDAO(DatabaseManager(this))
 
 
-        calculateButton.setOnClickListener {
+        /*calculateButton.setOnClickListener {
             calcularBalance()
-        }
+        }*/
 
 
 
         refreshData()
        /* calcularBalance()*/
+
+        calcularBalance()
 
     }
 
@@ -92,19 +91,21 @@ class MainActivity : AppCompatActivity() {
 
         refreshData()
         //poner aqui la funcion calcular
-        calcularBalance()
+
+
     }
 
     fun refreshData() {
         movimientoList = movimientoDAO.findAll()
         adapter.updateItems(movimientoList)
+
     }
 
     fun initViews(){
 
         movimientosTextView =  findViewById(R.id.MovimientoTtilte)
         balanceTextView =  findViewById(R.id.balanceTextView)
-        calculateButton = findViewById(R.id.calculateButton)
+
         resultTextView = findViewById(R.id.resultTextView)
     }
 
